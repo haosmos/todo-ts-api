@@ -6,9 +6,18 @@ POST http://localhost:3001/tasks
 Content-Type: application/json
 
 {
-  "title": "Mololor sit amet",
-  "date": "2023-01-01T12:00:00Z",
-  "description": "Lorem ipsum dolor sit amet",
-  "priority": "normal",
-  "status": "todo"
+	"title": "Mololor sit amet",
+	"date": "2023-01-01T12:00:00Z",
+	"description": "Lorem ipsum dolor sit amet",
+	"priority": "normal",
+	"status": "todo"
+}
+
+### Update a task
+PUT http://localhost:3001/tasks
+Content-Type: application/json
+
+{
+	"id": "2280b362-901f-493f-bd54-f9ad8c985918",
+	"status": "inProgress"
 }

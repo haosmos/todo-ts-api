@@ -27,5 +27,23 @@ export const createValidator: ValidationChain[] = [
   body('status')
     .trim()
     .isIn([Status.todo, Status.inProgress, Status.completed])
-    .withMessage('Priority must be one of this value: "todo", "inProgress", "completed"'),
+    .withMessage(
+      'Priority must be one of this value: "todo", "inProgress", "completed"'),
+];
+
+export const updateValidator = [
+  body('id')
+    .not()
+    .isEmpty()
+    .withMessage('The task id is mandatory')
+    .trim()
+    .isString()
+    .withMessage('Id must be a valid uuid format'),
+  body('status')
+    .trim()
+    .isIn([
+      Status.todo, Status.inProgress, Status.completed
+    ])
+    .withMessage(
+      'Priority must be one of this value: "todo", "inProgress", "completed"')
 ];
