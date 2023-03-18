@@ -18,8 +18,12 @@ class TaskController {
             date: 'ASC',
           }
         });
-      
+  
+      console.log(allTasks);
+  
       allTasks = instanceToPlain(allTasks) as Task[];
+  
+      console.log(allTasks);
       
       return res.json(allTasks).status(200);
       
