@@ -24,13 +24,13 @@ app.use(cors());
 
 export const AppDataSource = new DataSource({
   type: 'postgres',
-  host: process.env.HOST,
+  host: process.env.INTERNAL_HOST,
   port: 5432,
   username: process.env.USER,
   password: process.env.PASSWORD,
-  database: process.env.DB,
+  database: process.env.DATABASE,
   entities: [Task],
-  synchronize: false,
+  synchronize: true,
 });
 
 const port = process.env.PORT;
