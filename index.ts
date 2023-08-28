@@ -22,6 +22,7 @@ app.use(cors());
 //   synchronize: true,
 // });
 
+
 export const AppDataSource = new DataSource({
   type: 'postgres',
   host: process.env.INTERNAL_HOST,
